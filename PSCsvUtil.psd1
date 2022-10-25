@@ -22,8 +22,8 @@
     PrivateData = @{
         PSData = @{
             Tags       = @('csv', 'split', 'merge', 'powershell', 'streamreader', 'streamwriter')
-            LicenseUri = 'https://github.com/santisq/PS-CsvUtil/blob/main/LICENSE'
-            ProjectUri = 'https://github.com/santisq/PS-CsvUtil'
+            LicenseUri = 'https://github.com/santisq/PSCsvUtil/blob/main/LICENSE'
+            ProjectUri = 'https://github.com/santisq/PSCsvUtil'
         }
     }
 }
