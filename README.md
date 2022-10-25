@@ -1,6 +1,4 @@
-# PS-CsvUtil
-
-## Description
+<h1 align="center">PSCsvUtil</h1>
 
 PS-CsvUtil is a tiny PowerShell Module composed of two functions to efficiently __split and merge__ big Csv files using [`StreamReader`](https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader.-ctor?view=net-7.0) and [`StreamWriter`](https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-7.0) .NET Classes.
 

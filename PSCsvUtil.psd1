@@ -7,7 +7,7 @@
 #
 
 @{
-    RootModule    = 'PS-CSVUtil.psm1'
+    RootModule    = 'PSCsvUtil.psm1'
     ModuleVersion = '1.0.0'
     GUID          = '6d13bed0-f461-4b73-9bdd-f5d01146a01c'
     Author        = 'Santiago Squarzon'
