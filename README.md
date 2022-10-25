@@ -2,6 +2,13 @@
 
 PSCsvUtil is a tiny PowerShell Module composed of two functions to efficiently __split and merge__ big Csv files using [`StreamReader`](https://learn.microsoft.com/en-us/dotnet/api/system.io.streamreader.-ctor?view=net-7.0) and [`StreamWriter`](https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter?view=net-7.0) .NET Classes.
 
+
+## Installation
+
+```powershell
+Install-Module PSCsvUtil -Scope CurrentUser
+```
+
 ## Compatibility
 
 Tested and compatible with Windows PowerShell 5.1 and [PowerShell Core 7+](https://github.com/PowerShell/PowerShell).
