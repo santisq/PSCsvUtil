@@ -6,26 +6,15 @@ PS-CsvUtil is a tiny PowerShell Module composed of two functions to efficiently 
 
 ## Compatibility
 
-Tested and compatible with Windows PowerShell 5.1 and [PowerShell Core 7](https://github.com/PowerShell/PowerShell).
+Tested and compatible with Windows PowerShell 5.1 and [PowerShell Core 7+](https://github.com/PowerShell/PowerShell).
 
 ## Examples
 
 ### Split a Csv into 5 chunks
 
-The following example demonstrates how to split a Csv using the `-Chunks` parameter from [`Split-Csv`](/public/Split-Csv.ps1).
+This example demonstrates how to split a Csv using the `-Chunks` parameter from [`Split-Csv`](/public/Split-Csv.ps1).
 
 ```powershell
-PS ..\PS-CsvUtil> gpstree .\tests\
-
-Mode     Hierarchy                                   Size
-----     ---------                                   ----
-d----    tests                                       1.78 GB
--a---    └── bigcsv.csv                              1.78 GB
-
-PS ..\PS-CsvUtil> Split-Csv .\tests\bigcsv.csv -DestinationFolder .\tests\by15chunks\ -Chunks 15 -PassThru
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
 PS ..\PS-CsvUtil> gpstree .\tests\
 
 Mode     Hierarchy                                   Size
@@ -67,7 +56,7 @@ Column0    Column1    Column2    Column3    Column4    Column5
 
 ### Split a Csv into chunks of 250Mb
 
-The following example demonstrates how to split a Csv using the `-Size` parameter from [`Split-Csv`](/public/Split-Csv.ps1).
+This example demonstrates how to split a Csv using the `-Size` parameter from [`Split-Csv`](/public/Split-Csv.ps1).
 
 ```powershell
 PS ..\PS-CsvUtil> Split-Csv .\tests\bigcsv.csv -DestinationFolder .\tests\by50mbchunks -Size 50mb
@@ -80,9 +69,9 @@ d----    by50mbchunks                                                     1.78 G
 -a---    ├── bigcsv - Part 01.csv                                         50 MB
 -a---    ├── bigcsv - Part 02.csv                                         50 MB
 -a---    ├── bigcsv - Part 03.csv                                         50 MB
-             ....
-             ....
-             ....
+....
+....
+....
 -a---    ├── bigcsv - Part 33.csv                                         50 MB
 -a---    ├── bigcsv - Part 34.csv                                         50 MB
 -a---    ├── bigcsv - Part 35.csv                                         50 MB
@@ -99,7 +88,7 @@ Column0    Column1   Column2    Column3    Column4    Column5
 
 ### Merging a split Csv
 
-The following example demonstrates how to merge the Csv files generated with the examples above using [`Merge-Csv`](/public/Merge-Csv.ps1).
+This example demonstrates how to merge the Csv files generated with the examples above using [`Merge-Csv`](/public/Merge-Csv.ps1).
 
 ```powershell
 PS ..\PS-CsvUtil> Get-ChildItem .\tests\by50mbchunks\ -Filter *Part*.csv | Merge-Csv -DestinationPath mergedCsv50mbchunks.csv -PassThru
@@ -115,6 +104,4 @@ PS ..\PS-CsvUtil> (Get-FileHash .\mergedCsv50mbchunks.csv -Algorithm MD5).Hash
 
 PS ..\PS-CsvUtil> (Get-FileHash .\tests\bigcsv.csv -Algorithm MD5).Hash
 0452ACEC1664A93137C41D131FA4C3A9
-
-PS ..\PS-CsvUtil>
 ```
