@@ -13,16 +13,17 @@
     Author        = 'Santiago Squarzon'
     CompanyName   = 'Unknown'
     Copyright     = '(c) Santiago Squarzon. All rights reserved.'
-    Description   = 'tiny module to split and merge large Csv files.'
-    PowerShellVersion      = '5.1'
-    DotNetFrameworkVersion = '4.0'
+    Description   = 'tiny module to split and merge large Csv files'
+    PowerShellVersion = '5.1'
     FunctionsToExport = 'Merge-Csv', 'Split-Csv'
     CmdletsToExport   = @()
-    VariablesToExport = ''
-    AliasesToExport   = ''
+    VariablesToExport = @()
+    AliasesToExport   = @()
     PrivateData = @{
         PSData = @{
-            Tags = @('csv', 'split', 'merge', 'powershell', 'streamreader', 'streamwriter')
+            Tags       = @('csv', 'split', 'merge', 'powershell', 'streamreader', 'streamwriter')
+            LicenseUri = 'https://github.com/santisq/PS-CsvUtil/blob/main/LICENSE'
+            ProjectUri = 'https://github.com/santisq/PS-CsvUtil'
         }
     }
 }
