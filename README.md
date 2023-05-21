@@ -98,7 +98,7 @@ This example demonstrates how to merge the Csv files generated with the examples
 ```powershell
 PS ..\PS-CsvUtil> Get-ChildItem .\tests\by50mbchunks\ -Filter *Part*.csv | Merge-Csv -DestinationPath mergedCsv50mbchunks.csv -PassThru
 
-    Directory: D:\Zen\Documents\Scripts\pwsh\PS-CsvUtil
+    Directory: ..\pwsh\PS-CsvUtil
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
